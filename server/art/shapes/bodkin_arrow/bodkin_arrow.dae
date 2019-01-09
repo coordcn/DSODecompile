@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Миха 86</author>
+      <authoring_tool>COLLADAMax NextGen;  Version: 0.9.5;  Revision: 447;  Platform: Win32;  Configuration: Release Max2010</authoring_tool>
+      <source_data>file:///C:/Users/%D0%9C%D0%B8%D1%85%D0%B0%2086/Documents/3dsMax/scenes/bodkin_arrow.max</source_data>
+    </contributor>
+    <created>2011-01-17T17:02:05</created>
+    <modified>2011-01-17T17:02:05</modified>
+    <unit name="inch" meter="0.0254"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="ColorEffectR0G0B0">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color>0 0 0 1</color>
+            </diffuse>
+            <specular>
+              <color>1 1 1 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent>
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="bodkin_arrow">
+      <profile_COMMON>
+        <newparam sid="bodkin_arrow_dds-surface">
+          <surface type="2D">
+            <init_from>bodkin_arrow_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="bodkin_arrow_dds-sampler">
+          <sampler2D>
+            <source>bodkin_arrow_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="bodkin_arrow_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="3dsMAX">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lexture_lock>1</ambient_diffuse_lexture_lock>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="ColorEffectR0G0B0-material" name="ColorEffectR0G0B0-material">
+      <instance_effect url="#ColorEffectR0G0B0"/>
+    </material>
+    <material id="bodkin_arrow-material" name="bodkin_arrow-material">
+      <instance_effect url="#bodkin_arrow"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-bodkin_arrow" name="bodkin_arrow">
+      <mesh>
+        <source id="geom-bodkin_arrow-positions">
+          <float_array id="geom-bodkin_arrow-positions-array" count="57">0.17134 -0.000321217 3.10413 -0.10709 0.152326 3.10413 -0.10709 -0.15748 3.11398 -0.107091 0.152326 31.5008 -0.107091 -0.157479 31.5008 -1.62778 2.16159e-006 30.5696 0.00377334 1.56087e-006 25.3089 1.63533 2.26245e-006 30.5696 0.00377231 -1.63156 30.5696 0.00377231 1.63156 30.5696 0.00377357 2.17625e-006 25.3089 0.171339 -0.000321611 31.5008 0.245366 0.000278409 2.95773 -0.144103 0.213803 2.95773 -0.144103 -0.219556 2.9715 0.229184 0.0001473 1.98702 -0.136012 0.200364 1.98702 -0.136012 -0.205986 1.99994 -0.0142799 -0.00182481 0.848106</float_array>
+          <technique_common>
+            <accessor source="#geom-bodkin_arrow-positions-array" count="19" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-bodkin_arrow-normals">
+          <float_array id="geom-bodkin_arrow-normals-array" count="108">-0.494619 0.86911 -8.93781e-009 -0.504664 -0.863316 -1.41251e-008 -0.504212 -0.86358 -1.41042e-008 -0.50947 0.860489 -9.66833e-009 0.99998 0.00626998 6.05223e-008 0.999713 0.0239744 6.0557e-008 -3.09087e-008 1 -1.23778e-007 -3.09087e-008 1 -1.23778e-007 -3.09087e-008 1 -1.23778e-007 -1 -7.13523e-011 -2.39593e-007 -1 -7.13523e-011 -2.39593e-007 -1 -7.13523e-011 -2.39593e-007 -8.43833e-005 -0.000153915 1 -8.43833e-005 -0.000153915 1 -8.43833e-005 -0.000153915 1 -0.446715 -0.771886 0.452368 -0.461843 0.770057 0.440128 -0.437729 0.784123 0.439937 -0.451651 -0.768995 0.452391 0.892404 -0.00305409 0.451227 0.891937 0.0305249 0.451128 -0.999965 -0.000264779 -0.0083316 -0.999965 -0.000264779 -0.0083316 -0.998483 -0.00174928 -0.0550308 -0.998595 -0.00168348 -0.0529609 0.491315 -0.870945 -0.00807296 0.491315 -0.870945 -0.00807296 0.489522 -0.870479 -0.0513212 0.489427 -0.870424 -0.0531366 0.480721 0.876836 -0.0081324 0.480721 0.876836 -0.0081324 0.480066 0.875642 -0.0528028 0.480063 0.875636 -0.0529361 -0.994394 -0.00335961 -0.105688 0.486211 -0.867817 -0.102434 0.478144 0.872136 -0.103722</float_array>
+          <technique_common>
+            <accessor source="#geom-bodkin_arrow-normals-array" count="36" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-bodkin_arrow-map-channel-1">
+          <float_array id="geom-bodkin_arrow-map-channel-1-array" count="99">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#geom-bodkin_arrow-map-channel-1-array" count="33" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-bodkin_arrow-map-channel0">
+          <float_array id="geom-bodkin_arrow-map-channel0-array" count="99">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#geom-bodkin_arrow-map-channel0-array" count="33" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-bodkin_arrow-map-channel1">
+          <float_array id="geom-bodkin_arrow-map-channel1-array" count="72">0.153464 0.519363 1.1331 0.173912 0.560047 1.1331 0.198528 0.519035 1.1331 0.273463 0.999814 0 0.212531 0.999468 0 0.15783 5.01402e-005 0 0.15783 0.999814 0 0.213135 5.17942e-005 0 0.273462 5.01253e-005 0 0.103613 0.999814 0 0.103612 5.01402e-005 0 0.364282 0.572031 0 0.424873 0.571629 0 0.350338 0.541612 0 0.438064 0.540956 0 0.354241 0.327749 0 0.434031 0.328595 0 0.393061 0.0276943 0 0.442233 0.0171333 0.848993 1.1029 0.0129583 0.480713 0.769167 1.03274 -0.388672 0.442233 0.0171333 0.848993 1.1029 0.0129583 0.480713 0.769167 1.03274 -0.388672</float_array>
+          <technique_common>
+            <accessor source="#geom-bodkin_arrow-map-channel1-array" count="24" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-bodkin_arrow-vertices">
+          <input semantic="POSITION" source="#geom-bodkin_arrow-positions"/>
+        </vertices>
+        <triangles material="bodkin_arrow_1" count="24">
+          <input semantic="VERTEX" source="#geom-bodkin_arrow-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-bodkin_arrow-normals" offset="1"/>
+          <input semantic="COLOR" source="#geom-bodkin_arrow-map-channel-1" offset="2"/>
+          <input semantic="COLOR" source="#geom-bodkin_arrow-map-channel0" offset="3" set="0"/>
+          <input semantic="TEXCOORD" source="#geom-bodkin_arrow-map-channel1" offset="4" set="1"/>
+          <p>4 2 30 30 7 3 3 29 29 8 1 0 1 1 3 1 0 1 1 3 2 1 2 2 4 4 2 30 30 7 2 1 2 2 4 0 5 0 0 6 11 4 5 5 5 11 4 5 5 5 4 2 30 30 7 2 1 2 2 4 5 6 8 8 22 7 7 10 10 21 6 8 9 9 23 8 9 11 11 18 9 10 12 12 19 10 11 13 13 20 0 5 15 15 6 1 0 16 16 9 3 3 4 4 10 3 3 4 4 10 11 4 3 3 5 0 5 15 15 6 3 12 6 6 0 4 13 7 7 1 11 14 14 14 2 13 17 17 17 13 14 18 18 18 14 2 15 2 2 12 2 15 2 2 12 1 16 1 1 11 13 17 17 17 13 14 18 18 18 14 12 20 19 19 13 0 19 0 0 11 0 19 0 0 11 2 15 2 2 12 14 18 18 18 14 12 20 20 20 14 13 17 21 21 13 1 16 32 32 11 1 16 32 32 11 0 19 31 31 12 12 20 20 20 14 16 23 22 22 15 17 24 23 23 16 14 21 18 18 14 14 21 18 18 14 13 22 17 17 13 16 23 22 22 15 17 27 23 23 16 15 28 24 24 15 12 25 19 19 13 12 25 19 19 13 14 26 18 18 14 17 27 23 23 16 15 31 25 25 16 16 32 26 26 15 13 29 21 21 13 13 29 21 21 13 12 30 20 20 14 15 31 25 25 16 17 24 23 23 16 16 23 22 22 15 18 33 27 27 17 15 28 24 24 15 17 27 23 23 16 18 34 27 27 17 16 32 26 26 15 15 31 25 25 16 18 35 28 28 17</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_images>
+    <image id="bodkin_arrow_dds">
+      <init_from>file:///C:/Torque/Torque%203D%202009%20Pro%201.1%20Beta%203/Examples/FPS%20Example/game/art/Arrow/bodkin_arrow/bodkin_arrow.dds</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node id="node-Scene_Root" name="Scene_Root">
+        <node id="node-bodkin_arrow" name="bodkin_arrow">
+          <translate>-0.00367018 -0.0179003 0</translate>
+          <scale>1.98691 1.98691 1.98691</scale>
+          <matrix>0 -1 2.98023e-008 0 2.98023e-008 0 -1 15.748 1 -2.98023e-008 1.19209e-007 0 0 0 0 1</matrix>
+          <instance_geometry url="#geom-bodkin_arrow">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="bodkin_arrow_1" target="#bodkin_arrow-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

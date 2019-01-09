@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Миха 86</author>
+      <authoring_tool>COLLADAMax NextGen;  Version: 0.9.5;  Revision: 447;  Platform: Win32;  Configuration: Release Max2010</authoring_tool>
+      <source_data>file:///C:/Users/%D0%9C%D0%B8%D1%85%D0%B0%2086/Documents/3dsMax/scenes/broad_Arrow.max</source_data>
+    </contributor>
+    <created>2011-01-17T20:26:09</created>
+    <modified>2011-01-17T20:26:09</modified>
+    <unit name="inch" meter="0.0254"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="ColorEffectR0G0B0">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color>0 0 0 1</color>
+            </diffuse>
+            <specular>
+              <color>1 1 1 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent>
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="broad_Arrow">
+      <profile_COMMON>
+        <newparam sid="broad_Arrow_dds-surface">
+          <surface type="2D">
+            <init_from>broad_Arrow_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="broad_Arrow_dds-sampler">
+          <sampler2D>
+            <source>broad_Arrow_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="broad_Arrow_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="3dsMAX">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lexture_lock>1</ambient_diffuse_lexture_lock>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="ColorEffectR0G0B0-material" name="ColorEffectR0G0B0-material">
+      <instance_effect url="#ColorEffectR0G0B0"/>
+    </material>
+    <material id="broad_Arrow-material" name="broad_Arrow-material">
+      <instance_effect url="#broad_Arrow"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-broad_Arrow" name="broad_Arrow">
+      <mesh>
+        <source id="geom-broad_Arrow-positions">
+          <float_array id="geom-broad_Arrow-positions-array" count="69">0.17134 -0.000321217 3.10413 -0.10709 0.152326 3.10413 -0.10709 -0.15748 3.11398 -0.107091 0.152326 31.5008 -0.107091 -0.157479 31.5008 -1.62778 2.16159e-006 30.5696 0.00377334 1.56087e-006 25.3089 1.63533 2.26245e-006 30.5696 0.00377231 -1.63156 30.5696 0.00377231 1.63156 30.5696 0.00377357 2.17625e-006 25.3089 0.171339 -0.000321611 31.5008 -1.40756e-007 -0.0032292 1.02874 -1.07042 -0.00322884 5.23968 1.06437 -0.00322881 5.23968 -3.368e-007 0.209428 3.14195 -3.50304e-007 -0.215886 3.14195 0.630568 -0.00322902 2.65797 -0.630568 -0.00322902 2.65797 -0.471678 0.127076 3.78218 0.469833 0.127076 3.78218 -0.471678 -0.133534 3.78218 0.469833 -0.133534 3.78218</float_array>
+          <technique_common>
+            <accessor source="#geom-broad_Arrow-positions-array" count="23" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-broad_Arrow-normals">
+          <float_array id="geom-broad_Arrow-normals-array" count="117">-0.494619 0.86911 -8.93781e-009 -0.504664 -0.863316 -1.41251e-008 -0.504212 -0.86358 -1.41042e-008 -0.50947 0.860489 -9.66833e-009 0.99998 0.00626998 6.05223e-008 0.999713 0.0239744 6.0557e-008 -3.09087e-008 1 -1.23778e-007 -3.09087e-008 1 -1.23778e-007 -3.09087e-008 1 -1.23778e-007 -1 -7.13523e-011 -2.39593e-007 -1 -7.13523e-011 -2.39593e-007 -1 -7.13523e-011 -2.39593e-007 -8.43833e-005 -0.000153915 1 -8.43833e-005 -0.000153915 1 -8.43833e-005 -0.000153915 1 -0.347921 0.935648 -0.0592755 -0.326363 0.942903 -0.0664995 -0.266378 0.960016 -0.0860866 0.348623 0.935431 -0.058579 0.266546 0.959989 -0.0858774 0.326939 0.942743 -0.0659293 -0.347921 -0.935648 -0.0592753 -0.266378 -0.960017 -0.0860863 -0.326362 -0.942903 -0.0664992 -0.000869576 8.07554e-007 1 -0.000869576 8.07554e-007 1 -0.869078 4.54817e-007 0.494674 -0.869078 4.54817e-007 0.494675 0.868017 5.84868e-007 0.496535 0.868017 5.84868e-007 0.496535 5.80908e-005 -0.995721 -0.0924077 0.266545 -0.959989 -0.0858772 0.326939 -0.942743 -0.0659291 0.000150743 -0.995721 -0.0924077 0.000150743 0.995721 -0.092408 5.80908e-005 0.995721 -0.092408 -0.925927 4.51426e-007 0.377702 0.924992 6.64966e-007 0.379986 0.348623 -0.935431 -0.0585788</float_array>
+          <technique_common>
+            <accessor source="#geom-broad_Arrow-normals-array" count="39" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-broad_Arrow-map-channel-1">
+          <float_array id="geom-broad_Arrow-map-channel-1-array" count="102">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#geom-broad_Arrow-map-channel-1-array" count="34" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-broad_Arrow-map-channel0">
+          <float_array id="geom-broad_Arrow-map-channel0-array" count="102">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#geom-broad_Arrow-map-channel0-array" count="34" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-broad_Arrow-map-channel1">
+          <float_array id="geom-broad_Arrow-map-channel1-array" count="84">0.153464 0.519363 1.1331 0.173912 0.560047 1.1331 0.198528 0.519035 1.1331 0.273463 0.999814 0 0.212531 0.999468 0 0.15783 5.01402e-005 0 0.15783 0.999814 0 0.213135 5.17942e-005 0 0.273462 5.01253e-005 0 0.103613 0.999814 0 0.103612 5.01402e-005 0 0.280675 0.941328 0 0.360388 0.473445 0 0.389184 0.677187 0 0.474666 0.178181 0 0.588944 0.473445 0 0.559814 0.677187 0 0.474666 0.561157 0 0.667562 0.941328 0 0.473339 0.659158 0 0.495556 0.731957 0 0.455881 0.731605 0 0.529674 0.0297596 0.848993 1.01546 0.0255846 0.480713 0.769167 1.03274 -0.388672 0.529674 0.0297596 0.848993 1.01546 0.0255846 0.480713 0.769167 1.03274 -0.388672</float_array>
+          <technique_common>
+            <accessor source="#geom-broad_Arrow-map-channel1-array" count="28" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-broad_Arrow-vertices">
+          <input semantic="POSITION" source="#geom-broad_Arrow-positions"/>
+        </vertices>
+        <triangles material="broad_Arrow_1" count="27">
+          <input semantic="VERTEX" source="#geom-broad_Arrow-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-broad_Arrow-normals" offset="1"/>
+          <input semantic="COLOR" source="#geom-broad_Arrow-map-channel-1" offset="2"/>
+          <input semantic="COLOR" source="#geom-broad_Arrow-map-channel0" offset="3" set="0"/>
+          <input semantic="TEXCOORD" source="#geom-broad_Arrow-map-channel1" offset="4" set="1"/>
+          <p>4 2 18 18 7 3 3 17 17 8 1 0 1 1 3 1 0 1 1 3 2 1 2 2 4 4 2 18 18 7 2 1 2 2 4 0 5 0 0 6 11 4 5 5 5 11 4 5 5 5 4 2 18 18 7 2 1 2 2 4 5 6 8 8 26 7 7 10 10 25 6 8 9 9 27 8 9 11 11 22 9 10 12 12 23 10 11 13 13 24 0 5 15 15 6 1 0 16 16 9 3 3 4 4 10 3 3 4 4 10 11 4 3 3 5 0 5 15 15 6 3 12 6 6 0 4 13 7 7 1 11 14 14 14 2 13 15 20 20 18 19 16 28 28 16 18 17 27 27 15 14 18 22 22 11 17 19 26 26 12 20 20 29 29 13 13 21 20 20 11 18 22 27 27 12 21 23 30 30 13 20 27 29 29 20 15 24 24 24 19 16 25 21 21 17 16 25 21 21 17 22 26 32 32 16 20 27 29 29 20 19 28 28 28 21 21 29 31 31 13 16 25 23 23 17 16 25 23 23 17 15 24 24 24 19 19 28 28 28 21 16 33 25 25 17 12 30 19 19 14 17 31 26 26 15 17 31 26 26 15 22 32 33 33 16 16 33 25 25 17 18 17 27 27 15 19 16 28 28 16 15 34 24 24 17 15 34 24 24 17 12 35 19 19 14 18 17 27 27 15 15 34 24 24 17 20 20 29 29 13 17 19 26 26 12 17 19 26 26 12 12 35 19 19 14 15 34 24 24 17 16 33 25 25 17 21 23 30 30 13 18 22 27 27 12 18 22 27 27 12 12 30 19 19 14 16 33 25 25 17 22 26 32 32 16 14 36 22 22 18 20 27 29 29 20 19 28 28 28 21 13 37 20 20 11 21 29 31 31 13 17 31 26 26 15 14 38 22 22 18 22 32 33 33 16</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_images>
+    <image id="broad_Arrow_dds">
+      <init_from>file:///C:/Torque/Torque%203D%202009%20Pro%201.1%20Beta%203/Examples/FPS%20Example/game/art/Arrow/broad_Arrow/broad_Arrow.dds</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node id="node-Scene_Root" name="Scene_Root">
+        <node id="node-broad_Arrow" name="broad_Arrow">
+          <translate>-0.00367018 -0.0179003 0</translate>
+          <scale>1.98691 1.98691 1.98691</scale>
+          <matrix>0 -1 2.98023e-008 0 2.98023e-008 0 -1 15.748 1 -2.98023e-008 1.19209e-007 0 0 0 0 1</matrix>
+          <instance_geometry url="#geom-broad_Arrow">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="broad_Arrow_1" target="#broad_Arrow-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Миха 86</author>
+      <authoring_tool>COLLADAMax NextGen;  Version: 0.9.5;  Revision: 447;  Platform: Win32;  Configuration: Release Max2010</authoring_tool>
+      <source_data>file:///C:/Users/%D0%9C%D0%B8%D1%85%D0%B0%2086/Documents/3dsMax/scenes/Arrow.max</source_data>
+    </contributor>
+    <created>2011-01-17T21:24:34</created>
+    <modified>2011-01-17T21:24:34</modified>
+    <unit name="inch" meter="0.0254"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="ColorEffectR0G0B0">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color>0 0 0 1</color>
+            </diffuse>
+            <specular>
+              <color>1 1 1 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent>
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Arrow">
+      <profile_COMMON>
+        <newparam sid="Arrow_dds-surface">
+          <surface type="2D">
+            <init_from>Arrow_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Arrow_dds-sampler">
+          <sampler2D>
+            <source>Arrow_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Arrow_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="3dsMAX">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lexture_lock>1</ambient_diffuse_lexture_lock>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="ColorEffectR0G0B0-material" name="ColorEffectR0G0B0-material">
+      <instance_effect url="#ColorEffectR0G0B0"/>
+    </material>
+    <material id="Arrow-material" name="Arrow-material">
+      <instance_effect url="#Arrow"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-Arrow" name="Arrow">
+      <mesh>
+        <source id="geom-Arrow-positions">
+          <float_array id="geom-Arrow-positions-array" count="51">0.17134 -0.000321217 3.10413 -0.10709 0.152326 3.10413 -0.10709 -0.15748 3.11398 -0.107091 0.152326 31.5008 -0.107091 -0.157479 31.5008 0.705121 -0.000397747 3.48474 -0.705121 -0.000397747 3.48474 -1.24948e-007 -0.00039792 -0.0591638 -2.24697e-007 -0.207723 3.22994 -8.05581e-008 0.207524 3.22994 -1.62778 2.16142e-006 30.5639 0.00377334 1.56069e-006 25.3031 1.63533 2.26228e-006 30.5639 0.00377231 -1.63156 30.5639 0.00377231 1.63156 30.5639 0.00377357 2.17608e-006 25.3031 0.171339 -0.000321611 31.5008</float_array>
+          <technique_common>
+            <accessor source="#geom-Arrow-positions-array" count="17" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Arrow-normals">
+          <float_array id="geom-Arrow-normals-array" count="99">-0.504214 -0.863579 4.87511e-009 -0.509466 0.860491 -8.68439e-009 -0.494621 0.869109 -9.94928e-009 -0.504663 -0.863316 -3.26585e-008 0.999713 0.0239791 4.07504e-008 0.99998 0.00626937 8.04204e-008 -0.339849 1.46346e-007 0.94048 -0.339849 1.46346e-007 0.94048 -0.339849 1.46346e-007 0.94048 0.339849 -1.46346e-007 0.94048 0.339849 -1.46346e-007 0.94048 0.339849 -1.46346e-007 0.94048 -0.301469 -0.951588 -0.0599823 -0.301468 -0.951587 -0.0599823 -0.301469 -0.951588 -0.0599823 0.301468 -0.951587 -0.0599823 0.301468 -0.951588 -0.0599823 0.301468 -0.951588 -0.0599823 0.302253 0.951329 -0.0601385 0.302253 0.951329 -0.0601385 0.302253 0.951329 -0.0601385 -0.302253 0.951329 -0.0601385 -0.302253 0.951329 -0.0601385 -0.302253 0.951329 -0.0601385 -3.09087e-008 1 -1.23778e-007 -3.09087e-008 1 -1.23778e-007 -3.09087e-008 1 -1.23778e-007 1 7.13523e-011 2.39549e-007 1 7.13523e-011 2.39549e-007 1 7.13523e-011 2.39549e-007 -8.43833e-005 -0.000153915 1 -8.43833e-005 -0.000153915 1 -8.43833e-005 -0.000153915 1</float_array>
+          <technique_common>
+            <accessor source="#geom-Arrow-normals-array" count="33" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Arrow-map-channel-1">
+          <float_array id="geom-Arrow-map-channel-1-array" count="66">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#geom-Arrow-map-channel-1-array" count="22" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Arrow-map-channel0">
+          <float_array id="geom-Arrow-map-channel0-array" count="66">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#geom-Arrow-map-channel0-array" count="22" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Arrow-map-channel1">
+          <float_array id="geom-Arrow-map-channel1-array" count="66">0.494932 0.996975 0 0.285652 0.954733 0 0.421582 0.16242 0 0.482902 0.863308 0 0.693031 0.919092 0 0.273463 0.999814 0 0.212531 0.999468 0 0.15783 5.01402e-005 0 0.15783 0.999814 0 0.213135 5.17942e-005 0 0.273462 5.01253e-005 0 0.103613 0.999814 0 0.103612 5.01402e-005 0 0.445956 0.111329 0.848993 0.984623 -0.0281564 0.480713 0.962759 1.02428 -0.388672 0.153464 0.519363 1.1331 0.173912 0.560047 1.1331 0.198528 0.519035 1.1331 0.445956 0.111329 0.848993 0.984623 -0.0281564 0.480713 0.962759 1.02428 -0.388672</float_array>
+          <technique_common>
+            <accessor source="#geom-Arrow-map-channel1-array" count="22" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Arrow-vertices">
+          <input semantic="POSITION" source="#geom-Arrow-positions"/>
+        </vertices>
+        <triangles material="Arrow_1" count="15">
+          <input semantic="VERTEX" source="#geom-Arrow-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Arrow-normals" offset="1"/>
+          <input semantic="COLOR" source="#geom-Arrow-map-channel-1" offset="2"/>
+          <input semantic="COLOR" source="#geom-Arrow-map-channel0" offset="3" set="0"/>
+          <input semantic="TEXCOORD" source="#geom-Arrow-map-channel1" offset="4" set="1"/>
+          <p>4 0 10 10 9 3 1 9 9 10 1 2 1 1 5 1 2 1 1 5 2 3 2 2 6 4 0 10 10 9 2 3 2 2 6 0 4 0 0 8 16 5 8 8 7 16 5 8 8 7 4 0 10 10 9 2 3 2 2 6 8 6 6 6 0 5 7 18 18 1 9 8 7 7 3 9 9 7 7 3 6 10 19 19 4 8 11 6 6 0 6 12 19 19 1 7 13 5 5 2 8 14 6 6 3 8 15 6 6 3 7 16 5 5 2 5 17 18 18 4 5 18 18 18 1 7 19 5 5 2 9 20 7 7 3 9 21 7 7 3 7 22 5 5 2 6 23 19 19 4 10 24 11 11 20 12 25 13 13 19 11 26 12 12 21 14 27 15 15 14 13 28 14 14 13 15 29 16 16 15 0 4 20 20 8 1 2 21 21 11 3 1 4 4 12 3 1 4 4 12 16 5 3 3 7 0 4 20 20 8 3 30 9 9 16 4 31 10 10 17 16 32 17 17 18</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_images>
+    <image id="Arrow_dds">
+      <init_from>file:///C:/Torque/Torque%203D%202009%20Pro%201.1%20Beta%203/Examples/FPS%20Example/game/art/Arrow/Arrow/Arrow.dds</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node id="node-Scene_Root" name="Scene_Root">
+        <node id="node-Arrow" name="Arrow">
+          <translate>-0.00367018 -0.0179003 0</translate>
+          <scale>1.98691 1.98691 1.98691</scale>
+          <matrix>0 -1 2.98023e-008 0 2.98023e-008 0 -1 15.748 1 -2.98023e-008 1.19209e-007 0 0 0 0 1</matrix>
+          <instance_geometry url="#geom-Arrow">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Arrow_1" target="#Arrow-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>
